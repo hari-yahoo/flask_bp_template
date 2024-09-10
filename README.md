@@ -11,7 +11,7 @@ This repository provides a Flask Blueprint template to help jump-start any Pytho
 * Session Management: Pre-configured session management for authentication purposes.
 * SQLAlchemy Integration: Example setup for database integration with SQLAlchemy.
 * Template for Static Files: Pre-configured structure for static files like CSS, JS, and images.
-* 
+  
 ## Getting Started
 ### Prerequisites
 Ensure you have the following installed:
@@ -19,3 +19,25 @@ Ensure you have the following installed:
 - Python 3.8+
 - pip for Python package management
 - Virtual Environment (recommended)
+
+## Installation
+1. Clone the repository
+  ```git clone https://github.com/your-username/flask-blueprint-template.git
+   
+  cd flask-blueprint-template  ```
+3. Setup virtual environment
+   ```
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+   
+5. Install dependencies
+```
+pip install -r requirements.txt
+
+```
+6. Run flask application
+```
+flask run
+
+```
