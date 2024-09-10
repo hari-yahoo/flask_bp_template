@@ -13,6 +13,7 @@ This repository provides a Flask Blueprint template to help jump-start any Pytho
 * Template for Static Files: Pre-configured structure for static files like CSS, JS, and images.
   
 ## Getting Started
+This template is a starting point for Flask projects, designed to save you time on setup and help you focus on developing your application's core feature
 ### Prerequisites
 Ensure you have the following installed:
 
@@ -22,22 +23,49 @@ Ensure you have the following installed:
 
 ## Installation
 1. Clone the repository
-  ```git clone https://github.com/your-username/flask-blueprint-template.git
+  ```
+  git clone https://github.com/hari-yahoo/flask_bp_template.git
    
-  cd flask-blueprint-template  ```
-3. Setup virtual environment
-   ```
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
+  cd flask-blueprint-template 
+  ```
+1. Setup virtual environment
+```
+python3 -m venv venv
+source venv/bin/activate  
+# On Windows use `venv\Scripts\activate`
+```
    
-5. Install dependencies
+2. Install dependencies
 ```
 pip install -r requirements.txt
-
 ```
 6. Run flask application
 ```
 flask run
+```
+
+## Project Structure
+```
+.
+├── app/
+│   ├── __init__.py          # Initialize Flask app and register Blueprints
+│   ├── main/
+│   │   ├── __init__.py      # Main Blueprint setup
+│   │   ├── routes.py        # Main routes for the application
+│   │   └── templates/       # HTML templates
+│   └── static/              # Static files (CSS, JS, Images)
+├── config.py                # Configuration settings for Flask app
+├── requirements.txt         # Python dependencies
+├── app.py                   # Entry point to run the Flask app
+└── README.md                # Project documentation
 
 ```
+## Usage
+### Blueprints: 
+Use the provided main Blueprint as an example to create additional Blueprints and modularize the application.
+### Templates and Static Files: 
+Add or modify HTML templates and static files under their respective directories.
+### Database: 
+Modify the SQLAlchemy configuration in config.py for database usage.
+### Contributing
+Feel free to contribute by submitting pull requests or opening issues. Your contributions are greatly appreciated!
