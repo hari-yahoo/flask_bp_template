@@ -9,15 +9,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 
-<body>
+<body >
     <nav>
         <ul>
-            <li><a href="{{ url_for('main.index') }}">Home</a></li>
-            <li><a href="{{ url_for('main.about') }}">About</a></li>
+            <li><a href="{{ url_for('main_bp.index') }}">Home</a></li>
+            <li><a href="{{ url_for('main_bp.about') }}">About</a></li>
           
         </ul>
+        <ul>
+            <li><a href="{{ url_for('auth_bp.register') }}">Register</a></li>
+            {% if current_user.is_authenticated %}
+            <li><a href="{{ url_for('auth_bp.logout') }}">{{ current_user.username }} (Logout)</a></li>
+            {% else %}
+            <li><a href="{{ url_for('auth_bp.login') }}">Login</a></li>
+            {% endif %}
+        </ul>
     </nav>
-    <main>
+    <main class="container">
         {% block content %}{% endblock %}
     </main>
 </body>

@@ -1,0 +1,20 @@
+:root {
+    --font-size: 14px; /* Reduce from the default 16px */
+    --spacing: 1rem; /* Decrease from the default 1.5rem */
+    --pico-line-height: 1;
+    --pico-font-weight: 400;
+    --pico-font-size: 100%;
+  }
+
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; 
+}
+
+.box {
+    
+    padding: 20px;
+    border-radius: 5px;
+}
