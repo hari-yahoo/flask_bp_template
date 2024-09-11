@@ -25,21 +25,20 @@ Ensure you have the following installed:
 1. Clone the repository
   ```
   git clone https://github.com/hari-yahoo/flask_bp_template.git
-   
-  cd flask-blueprint-template 
+  cd flask_bp_template 
   ```
-1. Setup virtual environment
+2. Setup virtual environment
 ```
-python3 -m venv venv
-source venv/bin/activate  
-# On Windows use `venv\Scripts\activate`
+python3 -m venv .venv
+source .venv/bin/activate  
+# On Windows use `.venv\Scripts\activate`
 ```
    
-2. Install dependencies
+3. Install dependencies
 ```
 pip install -r requirements.txt
 ```
-6. Run flask application
+4. Run flask application
 ```
 flask run
 ```
@@ -49,14 +48,25 @@ flask run
 .
 ├── app/
 │   ├── __init__.py          # Initialize Flask app and register Blueprints
+│   ├── models.py            # All models
+│   ├── auth/
+│   │   ├── __init__.py      # Blueprint setup
+│   │   ├── forms.py         # Login and Register forms
+│   │   ├── routes.py        # auth related routes
+│   │   └── templates/       # HTML templates
+│   ├── api/
+│   │   ├── __init__.py      # Blueprint setup
+│   │   ├── routes.py        # api routes
+│   │   └── templates/ 
 │   ├── main/
-│   │   ├── __init__.py      # Main Blueprint setup
+│   │   ├── __init__.py      # Blueprint setup
 │   │   ├── routes.py        # Main routes for the application
 │   │   └── templates/       # HTML templates
+│   ├── templates/           # HTML templates
 │   └── static/              # Static files (CSS, JS, Images)
 ├── config.py                # Configuration settings for Flask app
 ├── requirements.txt         # Python dependencies
-├── app.py                   # Entry point to run the Flask app
+├── run.py                   # Entry point to run the Flask app
 └── README.md                # Project documentation
 
 ```
@@ -69,3 +79,9 @@ Add or modify HTML templates and static files under their respective directories
 Modify the SQLAlchemy configuration in config.py for database usage.
 ### Contributing
 Feel free to contribute by submitting pull requests or opening issues. Your contributions are greatly appreciated!
+
+> [!NOTE]
+> Following Flask extenstions are used in this template
+>   - Flask-login [Documentation](https://flask-login.readthedocs.io/en/latest/).
+>   - Flask-WTF [Documentation](https://flask-wtf.readthedocs.io/en/1.2.x/).
+>   - Flask-SQLAlchemy [Documentation](https://flask-sqlalchemy.readthedocs.io/).

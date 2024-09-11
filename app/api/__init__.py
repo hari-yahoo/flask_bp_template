@@ -1,7 +1,7 @@
 from flask import Blueprint
 
 # Define the Blueprint for the main module
-api = Blueprint('api', __name__)
+api_bp = Blueprint('api_bp', __name__)
 
 # Import the routes
 from . import routes

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+Register
+{% endblock %}
+
+{% block content %}
+<div class="center-box">
+    <article class="box" >
+
+        <form method="POST" action="{{ url_for('auth_bp.register') }}">
+            <fieldset>
+            {{ form.hidden_tag() }}
+            {{ form.username.label }} {{ form.username() }}
+            {{ form.email.label }} {{ form.email() }}
+            {{ form.password.label }} {{ form.password() }}
+            {{ form.submit() }}
+            </fieldset>
+            {{ get_flashed_messages()[0] }}
+        </form>
+    </article>
+</div>
+
+{% endblock %}
